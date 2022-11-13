@@ -22,3 +22,10 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+
+.Photo {
+  display: flex;
+  border-radius: 10px;
+
+}

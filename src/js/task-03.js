@@ -6,7 +6,8 @@
 // <ul class="gallery"></ul>
 
 // Використовуй масив об'єктів images для створення елементів <img>, 
-// вкладених в <li>. Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
+// вкладених в <li>. 
+// Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
 
 // Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
 // Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
@@ -25,3 +26,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imagesGalary = document.querySelector('.gallery')
+console.log(imagesGalary)
+
+function createMarkupImage(images) {
+const imageGallary = images.map(image => {
+return `<li><img class='Photo' src = '${image.url}' alt = '${image.ait}'></li>`}).join('');
+
+imagesGalary.insertAdjacentHTML('beforeend', imageGallary)
+}
+
+createMarkupImage(images);
