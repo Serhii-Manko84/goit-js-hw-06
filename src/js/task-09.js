@@ -10,11 +10,13 @@ function getRandomHexColor() {
 
 
 const chancgeColor = document.querySelector('.change-color');
+const spanColorName = document.querySelector('.color')
 const bodyColor = document.body;
-
 
 chancgeColor.addEventListener('click', event => {
 event.preventDefault()
 bodyColor.style.backgroundColor = getRandomHexColor();
+spanColorName.textContent = bodyColor.style.backgroundColor;
 
 })
+
